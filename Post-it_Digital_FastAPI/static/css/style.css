@@ -1,0 +1,118 @@
+/* --- 1. Configuración Global y Fuentes --- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+body {
+    background-color: #FDF8F0; 
+    color: #4A4A4A; 
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 2rem;
+    box-sizing: border-box; 
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #333;
+    font-weight: 700;
+}
+
+form {
+    display: flex; 
+    gap: 0.5rem; 
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+.input-text {
+    flex-grow: 1; 
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: #4A4A4A;
+    transition: border-color 0.3s ease;
+}
+
+.input-text:focus {
+    outline: none;
+    border-color: #F57C00; 
+}
+
+.input-submit {
+    background-color: #FFA726; 
+    color: #FFFFFF;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-submit:hover {
+    background-color: #F57C00; 
+}
+
+main > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem; 
+    width: 100%;
+}
+
+article {
+    background-color: #FFF3E0; 
+    border-radius: 12px; 
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.5rem; 
+    color: #333;
+    margin-top: 0;
+    word-break: break-word; 
+}
+
+a {
+    text-decoration: none;
+    color: #D32F2F; 
+    font-weight: 700;
+    font-size: 0.9rem;
+    background-color: #FFEBEE; 
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    margin-top: 1rem; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    background-color: #D32F2F; 
+    color: #FFFFFF;
+}

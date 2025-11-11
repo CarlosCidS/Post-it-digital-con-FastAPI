@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI Post-it_Digital</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+</head>
+<body>
+    <main>
+        <h1>Notas</h1>
+        <form method="POST" action="/notas/add">  
+            <input class="input-text" type="text" name="posit_name" placeholder="Escribe...." required />
+            <input class="input-submit" type="submit" value="Agregar" />
+        </form>
+        <div>
+            {% for nota in notas_list %} 
+                <article>
+                    <h2>{{ nota.name }}</h2> 
+                    <a href="/notas/delete?nota_id={{ nota.id }}">Eliminar</a>
+                </article>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>
